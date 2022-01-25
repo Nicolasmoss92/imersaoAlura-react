@@ -1,8 +1,22 @@
+function GlobalStyle() {
+    return(
+        <style global jsx>{`
+        * {
+            background: black;
+            margin: 0;
+            padding: 0;
+            
+        }
+        `}
+        </style>
+    );
+}
+
 function Title(props) {
     const Tag = props.tag;
     return (
         <>
-            <h1>{props.children}</h1>
+            <Tag>{props.children}</Tag>
             <style jsx>{`
                 ${Tag} {
                     color: red;
@@ -19,6 +33,7 @@ function Title(props) {
 function HomePage() {
     return (
         <div>
+            <GlobalStyle/>
             <Title tag="h2">Boas vindas de volta!</Title>
             <h2>Discord -- Alura Matrix</h2>
 
